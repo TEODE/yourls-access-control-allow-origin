@@ -20,7 +20,7 @@ function vg_yourls_cors($type) {
         header( "Content-Type: $types; charset=$charset" );
         $domain = parse_url(YOURLS_SITE);
         $fqdn = $domain['scheme']."://".$domain['host'];
-        header("Access-Control-Allow-Origin: "+$fqdn);
+        header("Access-Control-Allow-Origin: ".$fqdn);
         return true;
     }
     return false;
